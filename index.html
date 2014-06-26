@@ -14,34 +14,40 @@
 
     </section>
 
-
+    <footer>
+      <p>API provided by <a href="http://openweathermap.org/api">Openweathermap</a></p>
+      <p>Angular vs Backbone</p>
+    </footer>
     <!-- Templates -->
     <script type="text/template" id="list_template">
-      <input type="text" id="city_name" />
-      <select id="country_code">
-        <option value="es">ES</option>
-        <option value="uk">UK</option>
-      </select>
+      <div class="form-inline">
+        <input class="form-control" type="text" id="city_name" />
+        <select class="form-control" id="country_code">
+          <option value="es">ES</option>
+          <option value="uk">UK</option>
+        </select>
 
-      <button id="add_city">ADD</button>
-
-      <ul id="city_list">
+        <button class="btn btn-primary" id="add_city">ADD</button>
+      </div>
+      <ul id="city_list" class="list-unstyled">
 
       </ul>
     </script>
     <script type="text/template" id="item_template" >
       <li>
-        <%= name %>, <%=country %>
-        <button name="remove_city">REMOVE</button>
+        <span name="name"><%= name %>, <%=country %></span>
+        <button class="btn btn-danger btn-xs" name="remove_city">REMOVE</button>
         <a href="#" name="show_weather">SHOW WEATHER</a>
       </li>
     </script>
 
     <script type="text/template" id="weather_template">
-      <input type="text" id="city_name" />
-      <button id="add_city">FILTER</button>
+      <div class="form-inline">
+        <input class="form-control" type="text" id="city_name" />
+        <button class="btn btn-default" id="add_city">FILTER</button>
+      </div>
 
-      <ul id="city_list">
+      <ul id="forecast" class="list-unstyled">
         <li>
           <span name="city"><%=name %>, <%=sys.country %></span>
           <span name="status"><%=weather[0].description %></span>
@@ -49,7 +55,7 @@
           <span name="icon"><img src="http://openweathermap.org/img/w/<%=weather[0].icon%>.png" /></span>
         </li>
       </ul>
-      <button id="back">Back to city list</button>
+      <button id="back" class="btn btn-primary btn-lg">Back to city list</button>
     </script>
 
     <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
