@@ -11,6 +11,12 @@
     </header>
 
     <section id="content">
+
+    </section>
+
+
+    <!-- Templates -->
+    <script type="text/template" id="list_template">
       <input type="text" id="city_name" />
       <select id="country_code">
         <option value="es">ES</option>
@@ -20,21 +26,9 @@
       <button id="add_city">ADD</button>
 
       <ul id="city_list">
-        <li>
-          Arteixo, ES
-          <button name="remove_city">REMOVE</button>
-          <a href="#" name="show_weather">SHOW WEATHER</a>
-        </li>
-        <li>
-          Bristol, UK
-          <button name="remove_city">REMOVE</button>
-          <a href="#" name="show_weather">SHOW WEATHER</a>
-        </li>
+        
       </ul>
-    </section>
-
-
-    <!-- Templates -->
+    </script>
     <script type="text/template" id="item_template" >
       <li>
         <%= name %>, <%=country %>
