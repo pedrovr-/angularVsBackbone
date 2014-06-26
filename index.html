@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="template.css" />
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <meta charset="utf-8" />
+    <title>Open Weather Map</title>
+  </head>
+  <body>
+    <header>
+      <h1>Open Weather Map</h1>
+    </header>
+
+    <section id="content">
+      <input type="text" id="city_name" />
+      <select id="country_code">
+        <option value="es">ES</option>
+        <option value="uk">UK</option>
+      </select>
+
+      <button id="add_city">ADD</button>
+
+      <ul id="city_list">
+        <li>
+          Arteixo, ES
+          <button name="remove_city">REMOVE</button>
+          <a href="#" name="show_weather">SHOW WEATHER</a>
+        </li>
+        <li>
+          Bristol, UK
+          <button name="remove_city">REMOVE</button>
+          <a href="#" name="show_weather">SHOW WEATHER</a>
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- Templates -->
+    <script type="text/template" id="item_template" >
+      <li>
+        <%= name %>, <%=country %>
+        <button name="remove_city">REMOVE</button>
+        <a href="#" name="show_weather">SHOW WEATHER</a>
+      </li>
+    </script>
+
+    <script type="text/template" id="weather_template">
+      <input type="text" id="city_name" />
+      <button id="add_city">FILTER</button>
+
+      <ul id="city_list">
+        <li>
+          <span name="city"><%=name %>, <%=sys.country %></span>
+          <span name="status"><%=weather[0].description %></span>
+          <span name="sunrise">Sale el sol a las <%=sunrise %></span>
+          <span name="icon"><img src="http://openweathermap.org/img/w/<%=weather[0].icon%>.png" /></span>
+        </li>
+      </ul>
+      <button id="back">Back to city list</button>
+    </script>
+
+    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="underscore.js"></script>
+    <script type="text/javascript" src="backbone.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+
+  </body>
+</html>

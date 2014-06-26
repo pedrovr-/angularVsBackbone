@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+}
+
+header {
+  background: #CC2222;
+  margin: 0;
+  padding: 0.5em 1.5em;
+  color: white;
+  margin-bottom: 1em;
+}
+
+footer {
+  border-top: 2px solid #CC2222;
+  margin-top: 4em;
+  padding: 1em;
+  color: #666;
+}
+
+h1 #city_name {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+section {
+  padding: 1em;
+  min-height: 25em;
+}
+
+ul#city_list {
+  margin: 1em;
+  margin-top: 2em;
+}
+
+ul#city_list [name=name] {
+  display: inline-block;
+  min-width: 10em;
+}
+
+ul#city_list li {
+  margin-bottom: 0.5em;
+}
+
+ul#forecast {
+  margin: 1em 0em;
+  font-size: 1.4em;
+}
+
+ul#forecast li span {
+  display: inline-block;
+  padding: 0.6em;
+  border-right: 2px dotted #aaa;
+}
+
+ul#forecast li span:last-child {
+  border-right: none;
+}
