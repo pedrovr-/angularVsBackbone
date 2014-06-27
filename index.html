@@ -18,7 +18,11 @@
       <p>API provided by <a href="http://openweathermap.org/api">Openweathermap</a></p>
       <p>Angular vs Backbone</p>
     </footer>
-    <!-- Templates -->
+    <!--
+      Templates. Normalmente iran en ficheros separados, y se cargaran bien con
+      underscore como estas o bien con otra librería como mustachejs. Por claridad
+      y rapidez se incluyen en este fichero.
+    -->
     <script type="text/template" id="list_template">
       <div class="form-inline">
         <input class="form-control" type="text" id="city_name" />
@@ -58,6 +62,14 @@
       <button id="back" class="btn btn-primary btn-lg">Back to city list</button>
     </script>
 
+    <!--
+      Carga de librería de backbone y sus dependendias.
+      El orden es importante ya que si no se cargan en este orden las dependencias
+      no se cargarán bien.
+      Lo más habitual en un entorno más complejo es usar require.js para manejar
+      todas las dependencias, y separar los objetos de nuestra aplicación en varios
+      ficheros por claridad.
+    -->
     <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="underscore.js"></script>
     <script type="text/javascript" src="backbone.js"></script>
